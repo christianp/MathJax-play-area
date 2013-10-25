@@ -1,0 +1,35 @@
+body {
+	margin: 1em 2em;
+}
+#setup {
+	float: left;
+	width: 40%;
+	margin: 0 0 0 5em;
+}
+#setup label {
+	margin: 0 5px;
+}
+#setup input[type="radio"], #setup input[type="range"] {
+	margin-right: 5px;
+}
+#setup textarea {
+	width: 100%;
+	height: 10em;
+	font-family: monospace;
+}
+#setup #content-area {
+	height: 30em;
+}
+#content {
+	float: right;
+	width: 50%;
+}
+#content.sans {
+	font-family: sans-serif;
+}
+#content.serif {
+	font-family: serif;
+}
+#content.cmunbright {
+	font-family: "Computer Modern Bright";
+}
