@@ -23,9 +23,20 @@ $(document).ready(function() {
 		ko.computed(function() {
 			this.contentCSS();
 			var config = JSON.parse(this.config());
-			window.MathJax = $.extend({},config,{SVG:{font:this.font()},"HTML-CSS":{webfont:this.font()}});
+			var font = this.font();
+			var fontConfig = {
+				"SVG":{ 
+					font:font
+				},
+				"HTML-CSS": {
+					webFont: font,
+					preferredFont: font,
+					availableFonts: [font]
+				}
+			};
+			window.MathJax = $.extend({},config,fontConfig);
 			$('script[id="mathjax"]').remove();
-			$('body').append('<script id="mathjax" type="text/javascript" src="http://beta.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG.js"></script>');
+			$('body').append('<script id="mathjax" type="text/javascript" src="http://beta.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML.js"></script>');
 			$('#content').html(this.content());
 		},this);
 	}
