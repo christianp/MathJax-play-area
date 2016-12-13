@@ -36,7 +36,7 @@ $(document).ready(function() {
 			};
 			window.MathJax = $.extend({},config,fontConfig);
 			$('script[id="mathjax"]').remove();
-			$('body').append('<script id="mathjax" type="text/javascript" src="http://beta.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML.js"></script>');
+			$('body').append('<script id="mathjax" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML.js"></script>');
 			$('#content').html(this.content());
 		},this);
 	}
